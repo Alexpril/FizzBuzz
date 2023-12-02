@@ -1,4 +1,4 @@
-using FizzBuzz1;
+using FizzBuzz;
 
 namespace UnitTests
 {
@@ -11,9 +11,7 @@ namespace UnitTests
         [InlineData(15, "FizzBuzz")]
         public void Test1(int testNumber, string expectedResult)
         {
-            var fizzBuzz = new FizzBuzz();
-
-            var result = fizzBuzz.CheckResult(testNumber);
+            var result = FizzBuzzService.CheckResult(testNumber);
 
             Assert.Equal(result, expectedResult);
         }
